@@ -1,1 +1,8 @@
-<p>quote-detail works!</p>
+<div class="container">
+    <div>
+        <a (click)="likeButtonClick(quote)" id="votes"> Like| {{quote.upvote}} </a>
+        <a (click)="dislikeButtonClick(quote)" id="votes1"> Dislike | {{quote.downvote}} </a>
+    </div>
+    <p>added {{quote.completeDate|timeCount}} days</p>
+    <a class="btn btn-danger" (click)='deletequote(quote)'>Delete quote</a>
+</div>
