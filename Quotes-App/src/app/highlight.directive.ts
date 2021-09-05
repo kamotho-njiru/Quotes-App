@@ -1,10 +1,11 @@
-import { Directive } from '@angular/core';
+export class Quote {
+  showName:boolean;
+  public upvote:number;
+  public downvote:number;
 
-@Directive({
-  selector: '[appHighlight]'
-})
-export class HighlightDirective {
-
-  constructor() { }
-
-}
+  constructor( public id:number, public text:string, public name:string, public completeDate: Date){
+        this.showName=false;
+        this.upvote=0;
+        this.downvote=0;
+      }
+    }
